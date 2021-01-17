@@ -1,0 +1,37 @@
+from random import randint
+import time
+print('Suas opções:')
+print('[ 0 ] PEDRA')
+print('[ 1 ] PAPEL')
+print('[ 2 ] TESOURA')
+n = int(input('Qual a é sua jogada?'))
+npc = randint(0,2)
+jog = 0
+if n < 0 or n > 2:
+    print('JOGADA INVÁLIDA')
+    exit()
+print('JO')
+time.sleep(1)
+print('KEN')
+time.sleep(1)
+print('PO!!!')
+print('-=-=-=-=-=-=-=-=-=-=-=-=')
+if npc == 0:
+    print('Computador jogou PEDRA')
+elif npc == 1:
+    print('Computador jogou PAPEL')
+else:
+    print('Computador jogou TESOURA')
+if n == 0:
+    print('Jogador jogou PEDRA')
+elif n == 1:
+    print('Jogador jogou PAPEL')
+elif n == 2:
+    print('Jogador jogou TESOURA')
+print('-=-=-=-=-=-=-=-=-=-=-=-=')
+if n == npc:
+    print('EMPATE')
+elif n == 0 and npc == 1 or n == 1 and npc == 2 or n == 2 and npc == 0:
+    print('COMPUTADOR VENCE')
+else:
+    print('JOGADOR VENCE')
